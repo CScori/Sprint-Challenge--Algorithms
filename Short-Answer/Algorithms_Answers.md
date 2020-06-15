@@ -3,13 +3,17 @@
 ## Exercise I
 
 a)
-o(n^3)
+o(n)
+due to the loop running on a single x*n
 
 b)
 
-o(n)
+o(n^2)
+because we have nested for loops both using n*n 
+
 c)
-o(logn)
+o(n)
+due to the function decrementing and will only run as much as initially given
 ## Exercise II
 
 UNDERSTAND
@@ -27,4 +31,4 @@ no break floor is below f
 return first instance of break (assuming sorted list or stack)
 
 EXECUTE
-o(n)
+o(log n)
