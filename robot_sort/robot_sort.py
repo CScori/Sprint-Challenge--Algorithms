@@ -97,7 +97,31 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        #start position @ 0
+        #pic a number to sort
+        self.swap_item()
+        
+        while True:
+            #if numbers can move it will 
+            #if num is larger we swap else stop
+            while self.move_right():
+                if self.compare_item() >= 1:
+                    self.swap_item()
+                    
+            #exit statement
+            # if if the list is at end and end is none its sorted
+            if (self.can_move_right() == False) and (self.compare_item() == None):
+                self.swap_item()
+                break
+            
+            #need to go back through list
+            #need recurssive to move none through the list
+            while self.move_left():
+                if self.compare_item() ==None:
+                    self.swap_item()
+                    self.move_right()
+                    self.swap_item()
+                    break
 
 
 if __name__ == "__main__":
